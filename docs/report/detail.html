@@ -5,7 +5,9 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0, min-scale=1.0"> -->
     <meta name=viewport content="width=device-width initial-scale=1 minimum-scale=1 maximum-scale=1">
     <link rel="shortcut icon" href="../images/gd_ico.ico">
-    <title>我的检验</title>
+    <title>检验报告</title>
+    <!-- <link rel="stylesheet" href="report.css">
+    <link rel="stylesheet" href="reset.css"> -->
     <style>
         html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -106,32 +108,61 @@ body {
     background-color: #f5f5f5;
 }
 .body-content {
+    /* display: flex; */
+    /* flex-direction: column; */
     height: 100%;
+    /* padding-top: 10px; */
 }
-.header {
+.patient-info {
+    margin-top: 10px;
+    padding: 12px 14px;
+    background-color: #ffffff;
+}
+.patient-info .name span {
+    display: inline-block;
+    width: 49%;
+}
+.patient-info p + p {
+    margin-top: 10px;
+}
+.item-title {
+    padding: 12px 14px;
+    color: #5d5d5d;
+}
+
+.item-result {
     padding: 18px 14px;
     background-color: #ffffff;
 }
-.content-item {
-    margin-top: 14px;
-    padding: 18px 14px;
-    background-color: #ffffff;
+.common-tip {
+    font-size: 13px;
+    padding: 12px 14px;
+    color: #888888;
+    line-height: 1.5em;
+}
+.clear-item {
     display: flex;
+    flex-direction: row;
 }
-.content-item .left {
-    display: flex;
-    flex-direction: column;
+.left {
+    /* float: left; */
+    width: 34%;
+    overflow-wrap: break-word;
+    line-height: 1.3em;
 }
-.content-item .left span + span{
-    margin-top: 16px;
-}
-.content-item .right {
+.right {
+    /* float: right; */
     flex: 1 1 auto;
     text-align: right;
-    line-height: 48px;
 }
-.content-item .right a {
-    color: #62a5f9;
+.right span {
+    display: inline-block;
+    height: 100%;
+    line-height: 40px;
+}
+
+.later {
+    color: #888888;
 }
 
 
@@ -147,17 +178,45 @@ body {
 </head>
 <body>
     <div class="body-content">
-        <div class="header">
-            当前就诊人：胡德平
+        <div class="patient-info">
+            <p class="name">
+                <span>姓名：胡德平</span>
+                <span>性别：男</span>
+            </p>
+            <p>
+                <span>年龄：53岁</span>
+            </p>
+            <p>
+                <span>申请科室：核酸筛查门诊</span>
+            </p>
+            <p>
+                <span>报告医生：李江</span>
+            </p>
+            <p>
+                <span>报告时间：2020-9-9 14:31:22</span>
+            </p>
+            <p>
+                <span>检查报告号：1021020200909706</span>
+            </p>
+            <p>
+                <span>临床诊断：要求新冠核酸筛查</span>
+            </p>
         </div>
-        <div class="content-item">
+        <div class="item-title clear-item">
+            <div class="left">检测指标</div>
+            <div class="right">结果（参考值）</div>
+        </div>
+        <div class="item-result clear-item">
             <div class="left">
-                <span>普查：2019新冠状病毒基因检查</span>
-                <span>2020-9-9 14:31:22</span>
+                新型冠状病毒核酸检测
             </div>
             <div class="right">
-                <a href="detail.html">已完成&nbsp;&nbsp;</a><i>&gt;</i>
+                <span class="former">阴性(Negative)</span>
+                <span class="later">&nbsp;(阴性(Negative))</span>
             </div>
+        </div>
+        <div class="common-tip">
+            部分微生物报告为图像报告，无法在微信端查看，请移步医院现场打印结果。
         </div>
     </div>
     <div class="footer">
