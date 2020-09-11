@@ -6,8 +6,175 @@
     <meta name=viewport content="width=device-width initial-scale=1 minimum-scale=1 maximum-scale=1">
     <link rel="shortcut icon" href="../images/gd_ico.ico">
     <title>检验报告</title>
-    <link rel="stylesheet" href="report.css">
-    <link rel="stylesheet" href="reset.css">
+    <!-- <link rel="stylesheet" href="report.css">
+    <link rel="stylesheet" href="reset.css"> -->
+    <style>
+        html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section{
+  display: block;
+}
+ol, ul, li{
+  list-style: none;
+}
+blockquote, q{
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after{
+  content: '';
+  content: none;
+}
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ 
+/* custom */
+a{
+  color: #7e8c8d;
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+}
+::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track-piece{
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:vertical{
+  height: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:horizontal{
+  width: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+html, body{
+  width: 100%;
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", "微软雅黑", sans-serif;
+}
+body{
+  line-height: 1;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html{
+  overflow-y: auto;
+}
+ 
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after{
+  content: " ";
+  display: inline-block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix{
+  *zoom: 1;
+}
+    </style>
+    <style>
+
+body {
+    height: 100%;
+    background-color: #f5f5f5;
+}
+.body-content {
+    /* display: flex; */
+    /* flex-direction: column; */
+    height: 100%;
+    /* padding-top: 10px; */
+}
+.patient-info {
+    margin-top: 10px;
+    padding: 12px 14px;
+    background-color: #ffffff;
+}
+.patient-info .name span {
+    display: inline-block;
+    width: 49%;
+}
+.patient-info p + p {
+    margin-top: 10px;
+}
+.item-title {
+    padding: 12px 14px;
+    color: #5d5d5d;
+}
+
+.item-result {
+    padding: 18px 14px;
+    background-color: #ffffff;
+}
+.common-tip {
+    font-size: 13px;
+    padding: 12px 14px;
+    color: #888888;
+    line-height: 1.5em;
+}
+.clear-item {
+    display: flex;
+    flex-direction: row;
+}
+.left {
+    /* float: left; */
+    width: 34%;
+    overflow-wrap: break-word;
+    line-height: 1.3em;
+}
+.right {
+    /* float: right; */
+    flex: 1 1 auto;
+    text-align: right;
+}
+.right span {
+    display: inline-block;
+    height: 100%;
+    line-height: 40px;
+}
+
+.later {
+    color: #888888;
+}
+
+
+.footer {
+    width: 100%;
+    position: fixed;
+    font-size: 13px;
+    bottom: 10px;
+    text-align: center;
+    color: #888888;
+}
+    </style>
 </head>
 <body>
     <div class="body-content">
